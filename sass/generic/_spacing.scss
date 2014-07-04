@@ -1,0 +1,49 @@
+// based on the oocss by stubbornella (Nicole Sullivan)
+// @link https://github.com/stubbornella/oocss/blob/master/core/spacing/space.css
+/**
+ * Spacing classes
+ * Should be used to modify the default spacing between objects (not between nodes of the same object)
+ * Please use judiciously. You want to be using defaults most of the time, these are exceptions!
+ * <type><location><size>
+ *
+ *spacing helpers
+ *p,m = padding,margin
+ *a,t,r,b,l,h,v = all,top,right,bottom,left,horizontal,vertical
+ *s,m,l,n = small($space-sml),medium($space-med),large($space-lrg),none(0)
+ */
+@mixin oocssSpacing($space-med: $basespace/2, $space-lrg: $basespace, $space-sml: $basespace/4) {
+  .ptn, .pvn, .pan {              padding-top:     0           !important; }
+  .pts, .pvs, .pas { @include rem(padding-top,     $space-sml, !important); }
+  .ptm, .pvm, .pam { @include rem(padding-top,     $space-med, !important); }
+  .ptl, .pvl, .pal { @include rem(padding-top,     $space-lrg, !important); }
+  .prn, .phn, .pan {              padding-right:   0           !important; }
+  .prs, .phs, .pas { @include rem(padding-right,   $space-sml, !important); }
+  .prm, .phm, .pam { @include rem(padding-right,   $space-med, !important); }
+  .prl, .phl, .pal { @include rem(padding-right,   $space-lrg, !important); }
+  .pbn, .pvn, .pan {              padding-bottom:  0           !important; }
+  .pbs, .pvs, .pas { @include rem(padding-bottom,  $space-sml, !important); }
+  .pbm, .pvm, .pam { @include rem(padding-bottom,  $space-med, !important); }
+  .pbl, .pvl, .pal { @include rem(padding-bottom,  $space-lrg, !important); }
+  .pln, .phn, .pan {              padding-left:    0           !important; }
+  .pls, .phs, .pas { @include rem(padding-left,    $space-sml, !important); }
+  .plm, .phm, .pam { @include rem(padding-left,    $space-med, !important); }
+  .pll, .phl, .pal { @include rem(padding-left,    $space-lrg, !important); }
+  .mtn, .mvn, .man {              margin-top:      0           !important; }
+  .mts, .mvs, .mas { @include rem(margin-top,      $space-sml, !important); }
+  .mtm, .mvm, .mam { @include rem(margin-top,      $space-med, !important); }
+  .mtl, .mvl, .mal { @include rem(margin-top,      $space-lrg, !important); }
+  .mrn, .mhn, .man {              margin-right:    0           !important; }
+  .mrs, .mhs, .mas { @include rem(margin-right,    $space-sml, !important); }
+  .mrm, .mhm, .mam { @include rem(margin-right,    $space-med, !important); }
+  .mrl, .mhl, .mal { @include rem(margin-right,    $space-lrg, !important); }
+  .mbn, .mvn, .man {              margin-bottom:   0           !important; }
+  .mbs, .mvs, .mas { @include rem(margin-bottom,   $space-sml, !important); }
+  .mbm, .mvm, .mam { @include rem(margin-bottom,   $space-med, !important); }
+  .mbl, .mvl, .mal { @include rem(margin-bottom,   $space-lrg, !important); }
+  .mln, .mhn, .man {              margin-left:     0           !important; }
+  .mls, .mhs, .mas { @include rem(margin-left,     $space-sml, !important); }
+  .mlm, .mhm, .mam { @include rem(margin-left,     $space-med, !important); }
+  .mll, .mhl, .mal { @include rem(margin-left,     $space-lrg, !important); }
+}
+
+@include oocssSpacing();

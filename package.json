@@ -1,0 +1,31 @@
+{
+  "repository": {
+    "type": "git",
+    "url": "https://hbrown@bitbucket.org/hbrown/ubs-solomon.git"
+  },
+  "devDependencies": {
+    "bower": "^1.3.3",
+    "gulp": "^3.7.0",
+    "gulp-autoprefixer": "0.0.7",
+    "gulp-bless": "^1.0.1",
+    "gulp-cache": "^0.1.6",
+    "gulp-clean": "^0.2.4",
+    "gulp-concat": "^2.2.0",
+    "gulp-debug": "^0.3.0",
+    "gulp-imagemin": "^0.5.0",
+    "gulp-jshint": "^1.5.5",
+    "gulp-livereload": "^1.5.0",
+    "gulp-minify-css": "^0.3.4",
+    "gulp-notify": "^1.2.5",
+    "gulp-phpunit": "^0.5.1",
+    "gulp-rename": "^1.2.0",
+    "gulp-sass": "^0.7.2",
+    "gulp-scss-lint": "git://github.com/Harrisonbro/gulp-scss-lint.git#6d887d3187df",
+    "gulp-uglify": "^0.2.1",
+    "gulp-util": "^2.2.14",
+    "jshint-stylish": "^0.2.0",
+    "map-stream": "^0.1.0",
+    "yargs": "^1.2.1",
+    "psi": "0.0.3"
+  }
+}

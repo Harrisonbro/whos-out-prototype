@@ -1,0 +1,160 @@
+/**
+ * Give form elements some cursor interactions...
+ */
+label,
+input,
+textarea,
+button,
+select,
+option {
+    cursor: pointer;
+}
+
+.text-input:active,
+.text-input:focus,
+textarea:active,
+textarea:focus {
+    cursor: text;
+    outline: none;
+}
+
+fieldset {
+    @extend %basespace;
+}
+
+/**
+ * Text inputs
+ *
+ * Instead of a `[type]` selector for each kind of form input, we just use a
+ * class to target any/every one, e.g.:
+   <input type=text class=text-input>
+   <input type=email class=text-input>
+   <input type=password class=text-input>
+ *
+ */
+.text-input,
+textarea {
+    border: 1px solid grey;
+    width: 100%;
+}
+
+/**
+ * Group sets of form fields in a list, e.g.:
+ *
+   <ul class=form-fields>
+       <li>
+           <label />
+           <input />
+       </li>
+       <li>
+           <label />
+           <select />
+       </li>
+       <li>
+           <label />
+           <input />
+       </li>
+   </ul>
+ *
+ */
+.form-fields {
+    list-style: none;
+    margin: 0;
+
+    > li {
+        @extend %basespace;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+}
+
+/**
+ * Labels
+ *
+ * Define a `.label` class as well as a `label` element. This means we can apply
+ * label-like styling to meta-labels for groups of options where a `label`
+ * element is not suitable, e.g.:
+ *
+   <li>
+       <span class='label'>Fill out the options below:</span>
+       <ul>
+           <li>
+               <input /> <label />
+           </li>
+           <li>
+               <input /> <label />
+           </li>
+       </ul>
+   </li>
+ *
+ */
+label,
+.label {
+    display: block;
+}
+
+/**
+ * Extra help text in `label`s, e.g.:
+ *
+   <label>Card number <small class="label__additional">No spaces</small></label>
+ *
+ */
+.label__additional {
+    @extend .milli;
+    display: block;
+    font-weight: normal;
+}
+
+/*
+ * Groups of checkboxes and radios, e.g.:
+ *
+   <li>
+       <ul class='check-list'>
+           <li>
+               <input /> <label />
+           </li>
+           <li>
+               <input /> <label />
+           </li>
+       </ul>
+   </li>
+ *
+ */
+.check-list {
+    list-style: none;
+    margin: 0;
+}
+
+/*
+ * Labels in check-lists
+ */
+.check-label,
+.check-list label,
+.check-list .label {
+    display: inline-block;
+}
+
+/**
+ * Extra help text displayed after a field when that field is in focus, e.g.:
+ *
+   <label for=email>Email:</label>
+   <input type=email class=text-input id=email>
+   <small class=extra-help>.edu emails only</small>
+ *
+ * We leave the help text in the document flow and merely set it to
+ * `visibility:hidden;`. This means that it won’t interfere with anything once
+ * it reappears.
+ *
+ */
+/*small*/.extra-help {
+    display: inline-block;
+    visibility: hidden;
+}
+
+.text-input:active + .extra-help,
+.text-input:focus + .extra-help {
+    visibility: visible;
+}

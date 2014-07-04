@@ -1,0 +1,69 @@
+/**
+<div class="flag">
+    <div class="flag__image">
+        <img src="" alt="">
+    </div>
+    <div class="flag__body">
+        <p></p>
+    </div>
+</div>
+*/
+
+.flag {
+    @extend %basespace;
+    display: table;
+    width: 100%;
+}
+
+.flag__image,
+.flag__body {
+    display: table-cell;
+    vertical-align: middle;
+
+    .flag--top & {
+        vertical-align: top;
+    }
+
+    .flag--bottom & {
+        vertical-align: bottom;
+    }
+
+}
+
+.flag__image {
+    @include rem(padding-right, $basespace);
+
+    > img {
+        display: block;
+        max-width: none;
+    }
+
+    /**
+    * Reversed image location (right instead of left).
+    */
+    .flag--rev & {
+        padding-right: 0;
+        @include rem(padding-left, $basespace);
+    }
+
+}
+
+.flag__body {
+    width: 100%;
+}
+
+.flag__body,
+.flag__body > :last-child {
+    margin-bottom: 0;
+}
+
+/**
+ * `.flag__image`s in `.islet`s need an appropriately sized spacing.
+ */
+.islet .flag__image {
+    @include rem(padding-right, $basespace / 2);
+}
+
+.islet .flag__image--rev {
+    @include rem(padding-left, $basespace / 2);
+}

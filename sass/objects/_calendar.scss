@@ -1,0 +1,120 @@
+.calendar--wrapper {
+    position: relative;
+    width: 100%;
+    overflow-x: scroll;
+    overflow-y: none;
+    -webkit-overflow-scrolling: touch;
+    margin: 0.5em 0;
+}
+
+$scroll-indicator-size: 2em;
+
+.calendar--wrapper--outer {
+    position: relative;
+    width: 100%;
+    overflow: none;
+
+    .scroll-indicator {
+        position: absolute;
+
+        top: 0;
+        height: 100%;
+        padding: 0.5em;
+        z-index: 5;
+
+        min-width: $scroll-indicator-size;
+        background: lighten(black, 75%);
+        background: rgba(lighten(black, 75%), 0.75);
+    }
+
+    .scroll-indicator--right {
+        left: 100%;
+        margin-left: -$scroll-indicator-size;
+    }
+
+    .scroll-indicator__icon {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: $scroll-indicator-size;
+        height: $scroll-indicator-size;
+        line-height: $scroll-indicator-size;
+        margin-top: -$scroll-indicator-size / 2;
+        margin-left: (-$scroll-indicator-size / 2) + 0.15em;
+        text-align: center;
+    }
+}
+
+.calendar {
+    @extend %clearfix;
+    display: table;
+    position: relative;
+    padding-left: $scroll-indicator-size;
+    padding-right: $scroll-indicator-size;
+    outline: 1px solid red;
+
+    & .person + .person {
+        margin-top: -1em;
+    }
+
+    &::after,
+    &::before {
+        content: "";
+        position: absolute;
+        display: block;
+        top: 0;
+        height: 100%;
+        background: white;
+        width: $scroll-indicator-size;
+        z-index: 6;
+    }
+
+    &::before { left: 0; }
+    &::after  { right: 0; }
+}
+
+.day {
+    border: 1px solid lightgrey;
+    border-width: 0 1px 0 0;
+    max-width: 3.75em;
+    min-width: 3.75em;
+    display: table-cell;
+    padding: 0;
+    text-align: center;
+    text-transform: uppercase;
+
+    &.day--past { opacity: 0.35; }
+
+    &:first-child { border-left-width: 1px; }
+}
+
+.day__head {
+    margin: 0;
+    padding: 0;
+    padding-bottom: 0.25em;
+    margin-bottom: 0.25em;
+    border-bottom: 1px solid lightgrey;
+    padding-top: 0.25em;
+
+    .day--current & {
+        border-top: 0.25em solid #074e68;
+        padding-top: 0;
+    }
+}
+
+.day__dow {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.day__dowend { display: none; }
+.day__date {
+    font-size: 0.8em;
+    font-weight: 300;
+    color: grey;
+}
+
+.day__container {
+    min-height: 3em;
+}

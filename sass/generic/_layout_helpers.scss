@@ -1,0 +1,90 @@
+/**
+ * A series of helper classes to use arbitrarily. Only use a helper class if an
+ * element/component doesn’t already have a class to which you could apply this
+ * styling, e.g. if you need to float `.main-nav` left then add `float:left;` to
+ * that ruleset as opposed to adding the `.float--left` class to the markup.
+ *
+ * A lot of these classes carry `!important` as you will always want them to win
+ * out over other selectors.
+ */
+
+
+/**
+ * Add/remove floats
+ */
+.float--right   { float:right!important; }
+.float--left    { float:left !important; }
+.float--none    { float:none !important; }
+
+
+/**
+ * Text alignment
+ */
+.text--left     { text-align:left  !important; }
+.text--center   { text-align:center!important; }
+.text--right    { text-align:right !important; }
+
+/**
+ * Add/remove margins
+ */
+.push           { @include rem(margin,        $basespace, !important); }
+.push--top      { @include rem(margin-top,    $basespace, !important); }
+.push--right    { @include rem(margin-right,  $basespace, !important); }
+.push--bottom   { @include rem(margin-bottom, $basespace, !important); }
+.push--left     { @include rem(margin-left,   $basespace, !important); }
+.push--ends     { @include rem(margin-top,    $basespace, !important);
+                  @include rem(margin-bottom, $basespace, !important); }
+.push--sides    { @include rem(margin-right,  $basespace, !important);
+                  @include rem(margin-left,   $basespace, !important); }
+
+.push-half          { @include rem(margin,        $basespace / 2, !important); }
+.push-half--top     { @include rem(margin-top,    $basespace / 2, !important); }
+.push-half--right   { @include rem(margin-right,  $basespace / 2, !important); }
+.push-half--bottom  { @include rem(margin-bottom, $basespace / 2, !important); }
+.push-half--left    { @include rem(margin-left,   $basespace / 2, !important); }
+.push-half--ends    { @include rem(margin-top,    $basespace / 2, !important);
+                      @include rem(margin-bottom, $basespace / 2, !important); }
+.push-half--sides   { @include rem(margin-right,  $basespace / 2, !important);
+                      @include rem(margin-left,   $basespace / 2, !important); }
+
+.flush          { margin:        0 !important; }
+.flush--top     { margin-top:    0 !important; }
+.flush--right   { margin-right:  0 !important; }
+.flush--bottom  { margin-bottom: 0 !important; }
+.flush--left    { margin-left:   0 !important; }
+.flush--ends    { margin-top:    0 !important; margin-bottom: 0 !important; }
+.flush--sides   { margin-right:  0 !important; margin-left:   0 !important; }
+
+
+/**
+ * Add/remove paddings
+ */
+.soft           { @include rem(padding,        $basespace, !important); }
+.soft--top      { @include rem(padding-top,    $basespace, !important); }
+.soft--right    { @include rem(padding-right,  $basespace, !important); }
+.soft--bottom   { @include rem(padding-bottom, $basespace, !important); }
+.soft--left     { @include rem(padding-left,   $basespace, !important); }
+.soft--ends     { @include rem(padding-top,    $basespace, !important);
+                  @include rem(padding-bottom, $basespace, !important); }
+.soft--sides    { @include rem(padding-right,  $basespace, !important);
+                  @include rem(padding-left,   $basespace, !important); }
+
+.soft-half           { @include rem(padding,        $basespace / 2, !important); }
+.soft-half--top      { @include rem(padding-top,    $basespace / 2, !important); }
+.soft-half--right    { @include rem(padding-right,  $basespace / 2, !important); }
+.soft-half--bottom   { @include rem(padding-bottom, $basespace / 2, !important); }
+.soft-half--left     { @include rem(padding-left,   $basespace / 2, !important); }
+.soft-half--ends     { @include rem(padding-top,    $basespace / 2, !important);
+                       @include rem(padding-bottom, $basespace / 2, !important); }
+.soft-half--sides    { @include rem(padding-right,  $basespace / 2, !important);
+                       @include rem(padding-left,   $basespace / 2, !important); }
+
+.hard           { padding:        0 !important; }
+.hard--top      { padding-top:    0 !important; }
+.hard--right    { padding-right:  0 !important; }
+.hard--bottom   { padding-bottom: 0 !important; }
+.hard--left     { padding-left:   0 !important; }
+.hard--ends     { padding-top:    0 !important;
+                  padding-bottom: 0 !important; }
+.hard--sides    { padding-right:  0 !important;
+                  padding-left:   0 !important; }

@@ -1,0 +1,18 @@
+/**
+ * Horizontal list
+ */
+%h-list,
+.h-list {
+    @extend %plain-list;
+
+    > li {
+        // Remove spacing from inline-block
+        margin-right: -0.25em;
+
+        &,
+        > a {
+            display: inline-block;
+            zoom: 1;
+        }
+    }
+}

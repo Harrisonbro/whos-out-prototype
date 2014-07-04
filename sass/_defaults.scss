@@ -1,0 +1,30 @@
+// Base sizes
+$basesize: 16px !default;
+$bs: $basesize;
+$baseline: 1.5;
+$bl: $baseline;
+$basespace: $baseline * 1rem; // Should almost always be used with the rem()
+                              // mixin to provide a px fallback
+$ms-ratio: $major-third;
+
+// Base fonts
+$font-body: "helvetica neue", arial, sans-serif;
+$font-heading: "helvetica neue", arial, sans-serif;
+
+// Default spacing
+%basespace,
+.basespace {
+    margin-top: 0;
+    @include rem(margin-bottom, $basespace);
+}
+
+%basespace--half,
+.basespace--half {
+    margin-top: 0;
+    @include rem(margin-bottom, $basespace/2);
+}
+
+h1, h2, h3, h4, h5, h6, hgroup,
+ul, ol, dl, p, figure, form, pre, table, fieldset, hr {
+    @extend %basespace;
+}

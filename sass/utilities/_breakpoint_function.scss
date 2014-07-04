@@ -1,0 +1,41 @@
+@function breakpoint-include-in-no-query($query) {
+    @if type-of($query) == "list" {
+        $keyword: nth($query, 2);
+
+        @if type-of($keyword) == "string" and ($keyword == "no-query" or $keyword == "no query" or $keyword == "fallback") {
+            @return nth($query, 3);
+        }
+        @else {
+            @return false;
+        }
+    } @else {
+        @return false;
+    }
+}
+
+$breakpoint-no-queries: false !default;
+
+@mixin mq($query) {
+    // Grab actual media query part of string
+    @if type-of($query) == "list" {
+        $breakpoint: nth($query, 1);
+    }
+    @else {
+        $breakpoint: $query;
+    }
+
+    // If no queries is true (ie. old browser), only output if content is for fallback
+    @if $breakpoint-no-queries == true {
+        @if breakpoint-include-in-no-query($query) == true {
+            @content
+        }
+    }
+
+    // If not queries is not true (modern browser), output as normal
+    @else {
+        @media (min-width: $breakpoint) {
+            @content
+        }
+    }
+
+}

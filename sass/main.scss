@@ -1,0 +1,64 @@
+/**
+ * Functions to extend SASS's basic functionality.
+ *
+ * Must be imported before all other things
+ */
+@import "functions";
+@import "modular-scale/stylesheets/modular-scale";
+
+
+/**
+ * Default, global values used in subsequent SASS files
+ */
+@import "defaults";
+
+
+/**
+ * Helpers and modules
+ */
+@import "generic/normalize";
+@import "generic/clearfix";
+@import "generic/colors";
+@import "generic/fixes";
+@import "generic/spacing";
+
+
+/**
+ * Base styles
+ */
+@import "base/global";
+@import "base/forms";
+@import "base/headings";
+@import "base/main";
+@import "base/lists";
+@import "base/tables";
+
+
+/**
+ * Modules / Objects
+ *
+ * Note that many CSS objects that you'll create may already exist in the
+ * Intuit framework. See https://github.com/csswizardry/inuit.css/tree/master/objects
+ * and http://terabytenz.github.io/inuit.css-kitchensink/
+ *
+ * If not there you may also find useful snippets in
+ * https://github.com/Harrisonbro/wp-skeleton-theme/tree/master/sass (though
+ * this project does not follow the same SASS organisation or naming conventions)
+ */
+@import "objects/plain_list";
+@import "objects/horizontal_list";
+@import "objects/buttons";
+@import "objects/media";
+@import "objects/flag";
+@import "objects/header";
+@import "objects/calendar";
+@import "objects/person";
+@import "objects/person_chooser";
+
+
+/**
+ * Style trumps & helper classes
+ */
+@import "generic/layout_helpers";
+@import "generic/type_helpers";
+@import "generic/visibility";

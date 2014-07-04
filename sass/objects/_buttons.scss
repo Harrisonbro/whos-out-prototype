@@ -1,0 +1,154 @@
+/*
+
+<button type="button" class="button button--primary">Button</button>
+<button type="button" disabled class="button button--primary--inactive">Button</button>
+
+<ul class="button--group">
+    <li><a href="#" class="button button--primary">Primary</a></li>
+    <li><a href="#" class="button button--secondary">Secondary</a></li>
+    <li><a href="#" class="button button--alert">Alert</a></li>
+    <li><a href="#" class="button button--confirm">Confirm</a></li>
+</ul>
+
+*/
+
+$button-radius: 0.3em;
+
+/* Global button colors */
+
+$button-primary: #2c77ba;
+$button-secondary: lighten($color-grey, 5%);
+$button-alert: $color-error;
+$button-confirm: $color-success;
+
+$primary-inactive: desaturate(mix(white, $button-primary, 50%), 20%);
+$secondary-inactive: mix(white, $button-secondary, 45%);
+$alert-inactive: desaturate(mix(white, $button-alert, 55%), 50%);
+$confirm-inactive: desaturate(mix(white, $button-confirm, 50%), 30%);
+
+
+button,
+.button {
+    padding: 0.5em 1em;
+    display: inline-block;
+    vertical-align: middle;
+    white-space: nowrap;
+    cursor: pointer;
+    border: 0;
+    background-color: $button-primary;
+    border-radius: $button-radius;
+    overflow: visible;
+    line-height: 1;
+    text-decoration: none;
+    text-align: middle;
+    color: white;
+    letter-spacing: 0.8px;
+
+    a {
+        color: white;
+    }
+
+    &:hover,
+    :active,
+    :focus,
+    :visited {
+        text-decoration: none;
+        color: darken(white, 10);
+    }
+
+    &:hover,
+    :focus {
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    }
+
+    &:active {
+        outline: none;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.5) inset;
+    }
+}
+
+/* ul, ol */.button--group {
+    @extend %h-list;
+
+    .button {
+        border-radius: 0;
+        border: 1px solid black;
+    }
+
+    li:nth-child(n+2) .button {
+        border-left: 0;
+    }
+
+    li:first-child .button {
+        border-top-left-radius: $button-radius;
+        border-bottom-left-radius: $button-radius;
+        border-left: 1px solid black;
+    }
+
+    li:last-child .button {
+        border-top-right-radius: $button-radius;
+        border-bottom-right-radius: $button-radius;
+    }
+}
+
+.button--expanded {
+    width: 100%;
+}
+
+.button--large {
+    @extend .zeta;
+    padding: 0.6em 1.2em;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.button--small {
+    @extend .milli;
+    padding: 0.5em 0.8em;
+}
+
+.button--tiny {
+    @extend .micro;
+    padding: 0.4em 0.7em;
+}
+
+/* Button Colours */
+.button--primary {
+    &.button--inactive {
+        background-color: $primary-inactive;
+    }
+}
+
+.button--secondary {
+    background-color: $button-secondary;
+
+    &.button--inactive {
+        background-color: $secondary-inactive;
+    }
+}
+
+.button--alert {
+    background-color: $button-alert;
+
+    &.button--inactive {
+        background-color: $alert-inactive;
+    }
+}
+
+.button--confirm {
+    background-color: $button-confirm;
+
+    &.button--inactive {
+        background-color: $confirm-inactive;
+    }
+}
+
+/* Inactive buttons */
+.button--inactive,
+.button--inactive:hover,
+.button--inactive:active,
+.button--inactive:focus {
+    cursor: default;
+    box-shadow: none;
+    color: white;
+}

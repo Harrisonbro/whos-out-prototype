@@ -1,0 +1,24 @@
+/*!Colours */
+$color-blue: blue;
+$color-green: green;
+$color-red: red;
+$color-grey: grey;
+
+$color-text: #444;
+$color-heading: #222;
+$color-error: $color-red;
+$color-link: $color-blue;
+$color-link-hover: lighten($color-blue, 20%);
+$color-block-shade: darken(white, 5%);
+$color-block-hover: darken(white, 5%);
+$color-block-hover-dark: darken(white, 12%);
+$color-ui-line: darken(white, 25%);
+$color-ui-line-light: lighten($color-ui-line, 7%);
+
+/**
+*
+ */
+$color-success: lighten(green, 10%);
+$color-error: darken(red, 5%);
+$color-alert: darken(orange, 5%);
+$color-info: lighten(yellow, 20%);

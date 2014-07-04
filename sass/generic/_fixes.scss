@@ -1,0 +1,21 @@
+// Stop iOS zooming in on form elements by forcing a large enough font size when selected
+// http://www.456bereastreet.com/archive/201212/ios_webkit_browsers_and_auto-zooming_form_controls/
+@media only screen and (max-device-width: 568px) {
+    input[type="text"]:focus,
+    textarea:focus,
+    select:focus {
+        font-size: 16px;
+    }
+}
+
+/*
+ * Remove the gap between images, videos, audio and canvas and the bottom of
+ * their containers: h5bp.com/i/440
+ */
+
+audio,
+canvas,
+img,
+video {
+    vertical-align: middle;
+}

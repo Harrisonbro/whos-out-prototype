@@ -1,0 +1,104 @@
+/**
+ * Base font sizing scale
+ */
+
+.giga {
+    font-size: ms(7);
+    line-height: 0.5;
+    content: $basespace * 3.7;
+    @include rem(margin-top, $basespace * 4.7);
+    @include rem(margin-bottom, $basespace * 4);
+}
+
+.mega {
+    font-size: ms(6);
+    line-height: 0.5;
+    @include rem(margin-top, $basespace * 3.7);
+    @include rem(margin-bottom, $basespace * 3);
+}
+
+.kilo {
+    font-size: ms(5);
+    line-height: 0.6;
+    @include rem(margin-top, $basespace * 3.2);
+    @include rem(margin-bottom, $basespace * 2.5);
+}
+
+h1,
+.alpha {
+    font-size: ms(4);
+    line-height: 1;
+    // @include rem(margin-top, $basespace * 2);
+    // @include rem(margin-bottom, $basespace * 1.3);
+    margin: 0;
+}
+
+h2,
+.beta {
+    font-size: ms(3);
+    line-height: 1;
+    // @include rem(margin-top, $basespace * 1.7);
+    // @include rem(margin-bottom, $basespace * 1.1);
+    margin: 0;
+}
+
+h3,
+.gamma {
+    font-size: ms(2);
+    line-height: 1;
+    // @include rem(margin-top, $basespace * 1.5);
+    // @include rem(margin-bottom, $basespace * 0.8);
+    margin: 0;
+}
+
+h4,
+.delta {
+    font-size: ms(1);
+    line-height: 1.5;
+    // @include rem(margin-top, $basespace * 1.3);
+    // @include rem(margin-bottom, $basespace * 0.6);
+    margin: 0;
+}
+
+h5,
+.epsilon {
+    font-size: ms(0);
+    line-height: 1.5;
+    // @include rem(margin-top, $basespace);
+    // @include rem(margin-bottom, $basespace * 0.5);
+    margin: 0;
+}
+
+h6,
+.zeta {
+    font-size: ms(0);
+    line-height: 1.5;
+    // @include rem(margin-top, $basespace);
+    // @include rem(margin-bottom, $basespace * 0.5);
+    margin: 0;
+}
+
+small,
+.milli {
+    font-size: ms(-1);
+}
+
+.micro {
+    font-size: ms(-2);
+}
+
+/**
+ * Heading groups and generic any-heading class.
+ * To target any heading of any level simply apply a class of `.hN`, e.g.:
+ *
+   <hgroup>
+       <h1 class=hN>inuit.css</h1>
+       <h2 class=hN>Best. Framework. Ever!</h2>
+   </hgroup>
+ *
+ */
+// .hN {
+// }
+hgroup .hN {
+    margin-bottom: 0;
+}

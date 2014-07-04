@@ -1,0 +1,63 @@
+/**
+ * Place any image- and text-like content side-by-side, as per:
+ * stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code
+ * E.g.:
+ *
+   <div class="media">
+       <img src="..." alt="" class="media__img" />
+       <p class="media__body">...</p>
+   </div>
+
+   <div class="media">
+       <img src="..." alt="" class="media__img  media__img--rev" />
+       <p class="media__body">...</p>
+   </div>
+ *
+ * Demo: jsfiddle.net/inuitcss/cf4Qs
+ *
+ */
+.media {
+    @extend %clearfix;
+    @extend %basespace;
+    display: block;
+}
+
+.media__img {
+    float: left;
+    @include rem(margin-right, $basespace);
+}
+
+/**
+ * Reversed image location (right instead of left).
+ */
+.media__img--rev {
+    float: right;
+    margin-right: 0; // removes margin applied by .media__img
+    @include rem(margin-left, $basespace);
+}
+
+.media__img img,
+.media__img--rev img {
+    display: block;
+}
+
+.media__body {
+    overflow: hidden;
+}
+
+.media__body,
+.media__body > :last-child {
+    margin-bottom: 0;
+}
+
+
+/**
+ * `.media__img`s in `.islet`s need an appropriately sized spacing.
+ */
+.islet .media__img {
+    @include rem(margin-right, $basespace / 2);
+}
+
+.islet .media__img--rev {
+    @include rem(margin-left, $basespace / 2);
+}
