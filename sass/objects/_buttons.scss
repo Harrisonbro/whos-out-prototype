@@ -29,7 +29,7 @@ $confirm-inactive: desaturate(mix(white, $button-confirm, 50%), 30%);
 
 button,
 .button {
-    padding: 0.5em 1em;
+    padding: 0.5em 0.8em;
     display: inline-block;
     vertical-align: middle;
     white-space: nowrap;
@@ -43,6 +43,8 @@ button,
     text-align: middle;
     color: white;
     letter-spacing: 0.8px;
+    font-size: ms(-1);
+    text-transform: uppercase;
 
     a {
         color: white;

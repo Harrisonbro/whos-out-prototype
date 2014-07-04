@@ -7,7 +7,7 @@
     border-radius: 999em;
     box-shadow: 0 0 0 0.25em lightgrey;
     margin: 0.25em;
-    transition: all 0.25s;
+    transition: transform 0.25s;
 
     .calendar & {
         width: 2.5em;
@@ -23,11 +23,17 @@
 
     a.person:hover &,
     a.person:focus & {
-        box-shadow: 0 0 0 0.25em #074E68;
+        box-shadow: 0 0 0 0.25em #074e68;
         transform: scale(1.2);
     }
 
     a.person:active & {
         transform: scale(1.4);
+    }
+
+    a.day:hover &,
+    a.day:focus &,
+    a.day:active & {
+        box-shadow: 0 0 0 0.25em #074E68;
     }
 }

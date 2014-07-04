@@ -31,7 +31,7 @@
 }
 
 .flag__image {
-    @include rem(padding-right, $basespace);
+    @include rem(padding-right, 0.5em);
 
     > img {
         display: block;
@@ -43,7 +43,7 @@
     */
     .flag--rev & {
         padding-right: 0;
-        @include rem(padding-left, $basespace);
+        @include rem(padding-left, 0.5em);
     }
 
 }
@@ -61,9 +61,9 @@
  * `.flag__image`s in `.islet`s need an appropriately sized spacing.
  */
 .islet .flag__image {
-    @include rem(padding-right, $basespace / 2);
+    @include rem(padding-right, 0.5em / 2);
 }
 
 .islet .flag__image--rev {
-    @include rem(padding-left, $basespace / 2);
+    @include rem(padding-left, 0.5em / 2);
 }

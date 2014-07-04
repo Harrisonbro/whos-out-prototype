@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Who's Out?</title>
+	<title>Who's In?</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="apple-mobile-web-app-capable" content="yes" />
 	<link rel="stylesheet" href="css/main.css">
@@ -13,15 +13,25 @@
 </head>
 <body>
 
+	<!---->
 	<header class="flag">
 		<div class="flag__image">
-			<button class="js--jump-today">← Today</button>
-		</div><!-- flag__image -->
+			<button class="js--jump-today">« Today</button>
+		</div>
 		<div class="flag__body">
-			<h1>Who's out?</h1>
-			<h2 class="delta">at Sir Henry Parkes Road</h2>
-		</div><!-- flag__body -->
+			<h1>Who's in?</h1>
+			<h2 class="delta" style="font-weight: normal;">at Sir Henry Parkes Road</h2>
+		</div>
 	</header><!-- flag -->
+
+	<!-- --
+	<header>
+		<h1>Who's out?</h1>
+		<h2 class="delta" style="font-weight: normal;">at Sir Henry Parkes Road</h2>
+	</header>
+	<!-->
+
+	<div class="instruction">Tap on a day to edit:</div>
 
 	<div class="calendar--wrapper--outer">
 
@@ -32,7 +42,7 @@
 		<div class="calendar--wrapper">
 			<div class="calendar">
 
-				<div class="day day--past">
+				<a href="day.html" class="day day--past">
 
 					<div class="day__head">
 						<div class="day__dow">Mon<span class="day__dowend">day</span></div>
@@ -45,9 +55,9 @@
 						<div class="person"><img class="person__avatar" src="images/people/jo.jpg" alt="jo"></div>
 					</div><!-- .day__container -->
 
-				</div><!-- .day -->
+				</a><!-- .day -->
 
-				<div class="day day--current">
+				<a href="day.html" class="day day--current">
 
 					<div class="day__head">
 						<div class="day__dow">Tue<span class="day__dowend">sday</span></div>
@@ -61,76 +71,9 @@
 						<div class="person"><img class="person__avatar" src="images/people/luke.jpg" alt="luke"></div>
 					</div><!-- .day__container -->
 
-				</div><!-- .day -->
+				</a><!-- .day -->
 
-				<div class="day">
-
-					<div class="day__head">
-						<div class="day__dow">Wed<span class="day__dowend">nesday</span></div>
-						<div class="day__date">3 Aug</div>
-					</div><!-- .day__head -->
-
-					<div class="day__container">
-						<div class="person"><img class="person__avatar" src="images/people/luke.jpg" alt="luke"></div>
-						<div class="person"><img class="person__avatar" src="images/people/joy.jpg" alt="joy"></div>
-						<div class="person"><img class="person__avatar" src="images/people/karenza.jpg" alt="karenza"></div>
-					</div><!-- .day__container -->
-
-				</div><!-- .day -->
-
-				<div class="day">
-
-					<div class="day__head">
-						<div class="day__dow">Thu<span class="day__dowend">rsday</span></div>
-						<div class="day__date">4 Aug</div>
-					</div><!-- .day__head -->
-
-					<div class="day__container">
-					</div><!-- .day__container -->
-
-				</div><!-- .day -->
-
-				<div class="day">
-
-					<div class="day__head">
-						<div class="day__dow">Fri<span class="day__dowend">day</span></div>
-						<div class="day__date">5 Aug</div>
-					</div><!-- .day__head -->
-
-					<div class="day__container">
-						<div class="person"><img class="person__avatar" src="images/people/luke.jpg" alt="luke"></div>
-					</div><!-- .day__container -->
-
-				</div><!-- .day -->
-
-				<div class="day">
-
-					<div class="day__head">
-						<div class="day__dow">Sat<span class="day__dowend">urday</span></div>
-						<div class="day__date">6 Aug</div>
-					</div><!-- .day__head -->
-
-					<div class="day__container">
-						<div class="person"><img class="person__avatar" src="images/people/gusta.jpg" alt="gusta"></div>
-						<div class="person"><img class="person__avatar" src="images/people/harry.jpg" alt="harry"></div>
-					</div><!-- .day__container -->
-
-				</div><!-- .day -->
-
-				<div class="day">
-
-					<div class="day__head">
-						<div class="day__dow">Sun<span class="day__dowend">day</span></div>
-						<div class="day__date">7 Aug</div>
-					</div><!-- .day__head -->
-
-					<div class="day__container">
-
-					</div><!-- .day__container -->
-
-				</div><!-- .day -->
-
-				<div class="day">
+				<a href="day.html" class="day">
 
 					<div class="day__head">
 						<div class="day__dow">Wed<span class="day__dowend">nesday</span></div>
@@ -143,9 +86,9 @@
 						<div class="person"><img class="person__avatar" src="images/people/karenza.jpg" alt="karenza"></div>
 					</div><!-- .day__container -->
 
-				</div><!-- .day -->
+				</a><!-- .day -->
 
-				<div class="day">
+				<a href="day.html" class="day">
 
 					<div class="day__head">
 						<div class="day__dow">Thu<span class="day__dowend">rsday</span></div>
@@ -155,9 +98,9 @@
 					<div class="day__container">
 					</div><!-- .day__container -->
 
-				</div><!-- .day -->
+				</a><!-- .day -->
 
-				<div class="day">
+				<a href="day.html" class="day">
 
 					<div class="day__head">
 						<div class="day__dow">Fri<span class="day__dowend">day</span></div>
@@ -168,9 +111,9 @@
 						<div class="person"><img class="person__avatar" src="images/people/luke.jpg" alt="luke"></div>
 					</div><!-- .day__container -->
 
-				</div><!-- .day -->
+				</a><!-- .day -->
 
-				<div class="day">
+				<a href="day.html" class="day">
 
 					<div class="day__head">
 						<div class="day__dow">Sat<span class="day__dowend">urday</span></div>
@@ -182,9 +125,9 @@
 						<div class="person"><img class="person__avatar" src="images/people/harry.jpg" alt="harry"></div>
 					</div><!-- .day__container -->
 
-				</div><!-- .day -->
+				</a><!-- .day -->
 
-				<div class="day">
+				<a href="day.html" class="day">
 
 					<div class="day__head">
 						<div class="day__dow">Sun<span class="day__dowend">day</span></div>
@@ -195,16 +138,99 @@
 
 					</div><!-- .day__container -->
 
-				</div><!-- .day -->
+				</a><!-- .day -->
 
-				<div class="day"><div class="day__head"><div class="day__dow">Sun<span class="day__dowend">day</span></div><div class="day__date">7 Aug</div></div><div class="day__container"></div></div>
-				<div class="day"><div class="day__head"><div class="day__dow">Sun<span class="day__dowend">day</span></div><div class="day__date">7 Aug</div></div><div class="day__container"></div></div>
-				<div class="day"><div class="day__head"><div class="day__dow">Sun<span class="day__dowend">day</span></div><div class="day__date">7 Aug</div></div><div class="day__container"></div></div>
-				<div class="day"><div class="day__head"><div class="day__dow">Sun<span class="day__dowend">day</span></div><div class="day__date">7 Aug</div></div><div class="day__container"></div></div>
-				<div class="day"><div class="day__head"><div class="day__dow">Sun<span class="day__dowend">day</span></div><div class="day__date">7 Aug</div></div><div class="day__container"></div></div>
-				<div class="day"><div class="day__head"><div class="day__dow">Sun<span class="day__dowend">day</span></div><div class="day__date">7 Aug</div></div><div class="day__container"></div></div>
-				<div class="day"><div class="day__head"><div class="day__dow">Sun<span class="day__dowend">day</span></div><div class="day__date">7 Aug</div></div><div class="day__container"></div></div>
-				<div class="day"><div class="day__head"><div class="day__dow">Sun<span class="day__dowend">day</span></div><div class="day__date">7 Aug</div></div><div class="day__container"></div></div>
+				<a href="day.html" class="day">
+
+					<div class="day__head">
+						<div class="day__dow">Wed<span class="day__dowend">nesday</span></div>
+						<div class="day__date">3 Aug</div>
+					</div><!-- .day__head -->
+
+					<div class="day__container">
+						<div class="person"><img class="person__avatar" src="images/people/luke.jpg" alt="luke"></div>
+						<div class="person"><img class="person__avatar" src="images/people/joy.jpg" alt="joy"></div>
+						<div class="person"><img class="person__avatar" src="images/people/karenza.jpg" alt="karenza"></div>
+					</div><!-- .day__container -->
+
+				</a><!-- .day -->
+
+				<a href="day.html" class="day">
+
+					<div class="day__head">
+						<div class="day__dow">Thu<span class="day__dowend">rsday</span></div>
+						<div class="day__date">4 Aug</div>
+					</div><!-- .day__head -->
+
+					<div class="day__container">
+					</div><!-- .day__container -->
+
+				</a><!-- .day -->
+
+				<a href="day.html" class="day">
+
+					<div class="day__head">
+						<div class="day__dow">Fri<span class="day__dowend">day</span></div>
+						<div class="day__date">5 Aug</div>
+					</div><!-- .day__head -->
+
+					<div class="day__container">
+						<div class="person"><img class="person__avatar" src="images/people/luke.jpg" alt="luke"></div>
+					</div><!-- .day__container -->
+
+				</a><!-- .day -->
+
+				<a href="day.html" class="day">
+
+					<div class="day__head">
+						<div class="day__dow">Sat<span class="day__dowend">urday</span></div>
+						<div class="day__date">6 Aug</div>
+					</div><!-- .day__head -->
+
+					<div class="day__container">
+						<div class="person"><img class="person__avatar" src="images/people/gusta.jpg" alt="gusta"></div>
+						<div class="person"><img class="person__avatar" src="images/people/harry.jpg" alt="harry"></div>
+					</div><!-- .day__container -->
+
+				</a><!-- .day -->
+
+				<a href="day.html" class="day">
+
+					<div class="day__head">
+						<div class="day__dow">Sun<span class="day__dowend">day</span></div>
+						<div class="day__date">7 Aug</div>
+					</div><!-- .day__head -->
+
+					<div class="day__container">
+
+					</div><!-- .day__container -->
+
+				</a><!-- .day -->
+
+				<a href="day.html" class="day">
+					<div class="day__head"><div class="day__dow">Sun<span class="day__dowend">day</span></div><div class="day__date">7 Aug</div></div><div class="day__container"></div>
+				</a><!-- day -->
+				<a href="day.html" class="day">
+					<div class="day__head"><div class="day__dow">Sun<span class="day__dowend">day</span></div><div class="day__date">7 Aug</div></div><div class="day__container"></div>
+				</a><!-- day -->
+				<a href="day.html" class="day">
+					<div class="day__head"><div class="day__dow">Sun<span class="day__dowend">day</span></div><div class="day__date">7 Aug</div></div><div class="day__container"></div>
+				</a><!-- day -->
+				<a href="day.html" class="day">
+					<div class="day__head"><div class="day__dow">Sun<span class="day__dowend">day</span></div><div class="day__date">7 Aug</div></div><div class="day__container"></div>
+				</a><!-- day -->
+				<a href="day.html" class="day">
+					<div class="day__head"><div class="day__dow">Sun<span class="day__dowend">day</span></div><div class="day__date">7 Aug</div></div><div class="day__container"></div>
+				</a><!-- day -->
+				<a href="day.html" class="day">
+					<div class="day__head"><div class="day__dow">Sun<span class="day__dowend">day</span></div><div class="day__date">7 Aug</div></div><div class="day__container"></div>
+				</a><!-- day -->
+				<a href="day.html" class="day">
+					<div class="day__head"><div class="day__dow">Sun<span class="day__dowend">day</span></div><div class="day__date">7 Aug</div></div><div class="day__container"></div>
+				</a><!-- day -->
+				<a href="day.html" class="day">
+					<div class="day__head"><div class="day__dow">Sun<span class="day__dowend">day</span></div><div class="day__date">7 Aug</div></div><div class="day__container"></div>
+				</a><!-- day -->
 
 			</div><!-- .calendar -->
 		</div><!-- .calendar--wrapper -->
@@ -215,36 +241,36 @@
 
 	</div><!-- calendar--wrapper--outer -->
 
-	<div class="person_chooser">
+	<div class="person_chooser  clearfix">
 
-		<div class="person_chooser__instruction">Choose person's schedule to edit:</div>
+		<div class="instruction">Or, choose person's schedule to edit:</div>
 
 		<div class="person_chooser__people">
-			<a href="#" class="person">
+			<a href="person.html" class="person">
 				<img class="person__avatar" src="images/people/mike.jpg" alt="jo">
 			</a>
-			<a href="#" class="person">
+			<a href="person.html" class="person">
 				<img class="person__avatar" src="images/people/roxy.jpg" alt="jo">
 			</a>
-			<a href="#" class="person">
+			<a href="person.html" class="person">
 				<img class="person__avatar" src="images/people/jo.jpg" alt="jo">
 			</a>
-			<a href="#" class="person">
+			<a href="person.html" class="person">
 				<img class="person__avatar" src="images/people/jon.jpg" alt="jon">
 			</a>
-			<a href="#" class="person">
+			<a href="person.html" class="person">
 				<img class="person__avatar" src="images/people/gusta.jpg" alt="gusta">
 			</a>
-			<a href="#" class="person">
+			<a href="person.html" class="person">
 				<img class="person__avatar" src="images/people/harry.jpg" alt="harry">
 			</a>
-			<a href="#" class="person">
+			<a href="person.html" class="person">
 				<img class="person__avatar" src="images/people/luke.jpg" alt="luke">
 			</a>
-			<a href="#" class="person">
+			<a href="person.html" class="person">
 				<img class="person__avatar" src="images/people/joy.jpg" alt="joy">
 			</a>
-			<a href="#" class="person">
+			<a href="person.html" class="person">
 				<img class="person__avatar" src="images/people/karenza.jpg" alt="karenza">
 			</a>
 		</div>

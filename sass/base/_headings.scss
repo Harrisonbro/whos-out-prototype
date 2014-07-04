@@ -26,7 +26,7 @@
 
 h1,
 .alpha {
-    font-size: ms(4);
+    font-size: ms(3);
     line-height: 1;
     // @include rem(margin-top, $basespace * 2);
     // @include rem(margin-bottom, $basespace * 1.3);
@@ -35,7 +35,7 @@ h1,
 
 h2,
 .beta {
-    font-size: ms(3);
+    font-size: ms(2);
     line-height: 1;
     // @include rem(margin-top, $basespace * 1.7);
     // @include rem(margin-bottom, $basespace * 1.1);

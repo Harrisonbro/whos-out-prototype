@@ -16,11 +16,11 @@ $scroll-indicator-size: 2em;
 
     .scroll-indicator {
         position: absolute;
-
         top: 0;
         height: 100%;
         padding: 0.5em;
         z-index: 5;
+        pointer-events: none;
 
         min-width: $scroll-indicator-size;
         background: lighten(black, 75%);
@@ -71,7 +71,7 @@ $scroll-indicator-size: 2em;
     }
 
     &::before { left: 0; }
-    &::after  { right: 0; }
+    &::after { right: 0; }
 }
 
 .day {
@@ -83,10 +83,18 @@ $scroll-indicator-size: 2em;
     padding: 0;
     text-align: center;
     text-transform: uppercase;
+    text-decoration: none;
 
     &.day--past { opacity: 0.35; }
 
     &:first-child { border-left-width: 1px; }
+
+    &:hover,
+    &:focus,
+    &:active {
+        background: darken(white, 5%);
+    }
+
 }
 
 .day__head {
@@ -96,10 +104,18 @@ $scroll-indicator-size: 2em;
     margin-bottom: 0.25em;
     border-bottom: 1px solid lightgrey;
     padding-top: 0.25em;
+    color: #074e68;
 
     .day--current & {
         border-top: 0.25em solid #074e68;
         padding-top: 0;
+    }
+
+    a.day:hover &,
+    a.day:focus &,
+    a.day:active & {
+        background: #074e68;
+        color: white;
     }
 }
 
@@ -113,6 +129,12 @@ $scroll-indicator-size: 2em;
     font-size: 0.8em;
     font-weight: 300;
     color: grey;
+
+    a.day:hover &,
+    a.day:focus &,
+    a.day:active & {
+        color: white;
+    }
 }
 
 .day__container {
