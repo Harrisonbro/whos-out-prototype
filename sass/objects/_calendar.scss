@@ -52,7 +52,6 @@ $scroll-indicator-size: 2em;
     position: relative;
     padding-left: $scroll-indicator-size;
     padding-right: $scroll-indicator-size;
-    outline: 1px solid red;
 
     & .person + .person {
         margin-top: -1em;
@@ -88,20 +87,19 @@ $scroll-indicator-size: 2em;
     &.day--past { opacity: 0.35; }
 
     &:first-child { border-left-width: 1px; }
+}
 
-    &:hover,
-    &:focus,
-    &:active {
-        background: darken(white, 5%);
-    }
-
+a.day:hover,
+a.day:focus,
+a.day:active {
+    background: darken(white, 5%);
 }
 
 .day__head {
     margin: 0;
     padding: 0;
     padding-bottom: 0.25em;
-    margin-bottom: 0.25em;
+    // margin-bottom: 0.25em;
     border-bottom: 1px solid lightgrey;
     padding-top: 0.25em;
     color: #074e68;
@@ -139,4 +137,17 @@ $scroll-indicator-size: 2em;
 
 .day__container {
     min-height: 3em;
+}
+
+.day__status {
+    display: block;
+    line-height: 3em;
+    font-weight: bold;
+    background: darken(white, 5%);
+    color: darken(white, 20%);
+}
+
+.day__status--in {
+    background: green;
+    color: white;
 }

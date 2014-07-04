@@ -108,7 +108,7 @@ gulp.task('livereload', function() {
 
     gulp.watch([
             css_build + '/**/*.css',
-            'index.html',
+            '*.html',
             // 'app/**', // Watch application files
             '!' + css_src + '/**', // Ignore files directly compiled by Gulp
             // '!' + js_src + '/**',

@@ -98,10 +98,11 @@ button,
 }
 
 .button--large {
-    @extend .zeta;
-    padding: 0.6em 1.2em;
+    @extend .gamma;
+    padding: 1em 1.2em;
     margin-top: 0;
     margin-bottom: 0;
+    text-align: center;
 }
 
 .button--small {
