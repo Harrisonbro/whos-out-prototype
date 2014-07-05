@@ -151,3 +151,17 @@ a.day:active {
     background: green;
     color: white;
 }
+
+.js-day-status {
+    cursor: pointer;
+
+    &:hover {
+        background: darken(white, 15%);
+        color: darken(white, 40%);
+
+        &.day__status--in {
+            background: darken(green, 7%);
+            color: white;
+        }
+    }
+}
