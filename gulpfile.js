@@ -3,6 +3,8 @@
 
 var css_src = 'sass',
     css_build = 'css',
+    js_src = 'js',
+    js_build = 'js_build',
     // images_src = 'app/assets/images',
     // images_build = 'public/images',
     bower_src = 'bower_components';
@@ -20,7 +22,7 @@ var gulp = require('gulp'),
     minifyCSS = require('gulp-minify-css'),
     jshint = require('gulp-jshint'),
     map = require('map-stream'),
-    uglify = require('gulp-uglify'),
+    uglify = require('gulp-uglifyjs'),
     imagemin = require('gulp-imagemin'),
     clean = require('gulp-clean'),
     concat = require('gulp-concat'),
@@ -78,14 +80,12 @@ gulp.task('jshint', function() {
 
 gulp.task('javascript', ['js']);
 gulp.task('js', ['jshint'], function() {
-    return gulp.src(js_src + '/**/*.js')
-        .pipe(concat('main.js'))
-        .pipe(gulp.dest(js_build))
-        .pipe(rename({suffix: '.min'}))
-        .pipe(uglify({
+    return gulp.src([bower_src + '/jquery/dist/jquery.js', js_src + '/main.js'])
+        .pipe(uglify('main.js', {
             outSourceMap: true,
+            basePath: '/js_build',
             compress: {
-                drop_console: true,
+                drop_console: false,
                 drop_debugger: true,
                 dead_code: true
             }
@@ -136,7 +136,8 @@ gulp.task('watching-task', ['livereload'], function(){
         message: "Don't forget to enable the LiveReload browser plugin."
     });
     gulp.watch(css_src + '/**/*.scss', ['css']);
-    // gulp.watch(js_src + '/**/*.js', ['js']);
+    gulp.watch(js_src + '/**/*.js', ['js']);
+    gulp.watch(bower_components + '/**/*.js', ['js']);
     // gulp.watch(images_src + '/**/*', ['images']);
     gulp.watch('app/**/*.php', ['phpunit']);
 });

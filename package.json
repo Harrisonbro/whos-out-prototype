@@ -26,6 +26,7 @@
     "jshint-stylish": "^0.2.0",
     "map-stream": "^0.1.0",
     "yargs": "^1.2.1",
-    "psi": "0.0.3"
+    "psi": "0.0.3",
+    "gulp-uglifyjs": "^0.4.2"
   }
 }
