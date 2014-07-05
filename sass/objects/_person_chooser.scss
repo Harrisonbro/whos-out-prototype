@@ -1,4 +1,13 @@
+.person_chooser,
+.person_chooser__people {
+    margin: 1em 0;
+}
+
 .person_chooser__people .person {
-    margin: 0.25em;
+    margin: 0 0.25em 0.25em 0;
     float: left;
+}
+
+.person_chooser__people .person--status {
+    margin: 0 0.75em 0.75em 0;
 }

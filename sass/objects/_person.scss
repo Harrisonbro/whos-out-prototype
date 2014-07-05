@@ -37,3 +37,32 @@
         box-shadow: 0 0 0 0.25em #074E68;
     }
 }
+
+.person--status {
+    background: darken(white, 5%);
+    color: darken(white, 20%);
+
+    &:hover,
+    &:focus,
+    &:active {
+        background: darken(white, 15%);
+        color: darken(white, 40%);
+        box-shadow: none;
+
+        &.person--status--in {
+            background: darken(green, 7%);
+            color: white;
+        }
+    }
+}
+
+.person--status__label {
+    display: block;
+    line-height: 2;
+    font-weight: bold;
+}
+
+.person--status--in {
+    background: green;
+    color: white;
+}
