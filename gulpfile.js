@@ -108,10 +108,11 @@ gulp.task('livereload', function() {
 
     gulp.watch([
             css_build + '/**/*.css',
+            js_build + '/**/*.js',
             '*.html',
             // 'app/**', // Watch application files
             '!' + css_src + '/**', // Ignore files directly compiled by Gulp
-            // '!' + js_src + '/**',
+            '!' + js_src + '/**',
             // '!' + images_src + '/**',
             'public/**'
         ]).on('change', function(file) {
@@ -137,7 +138,7 @@ gulp.task('watching-task', ['livereload'], function(){
     });
     gulp.watch(css_src + '/**/*.scss', ['css']);
     gulp.watch(js_src + '/**/*.js', ['js']);
-    gulp.watch(bower_components + '/**/*.js', ['js']);
+    gulp.watch(bower_src + '/**/*.js', ['js']);
     // gulp.watch(images_src + '/**/*', ['images']);
     gulp.watch('app/**/*.php', ['phpunit']);
 });
