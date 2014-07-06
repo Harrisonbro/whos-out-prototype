@@ -1,0 +1,13 @@
+.loadable {
+    position: relative;
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background: rgba(black, 0.5);
+        background-image: url('http://loadergenerator.com/gif-load');
+    }
+}
