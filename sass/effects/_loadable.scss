@@ -1,13 +1,41 @@
 .loadable {
     position: relative;
-    &::after {
+}
+
+.loadable__loader {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(black, 0.5);
+}
+
+.loadable__loader__icon {
+    width: 100%;
+    height: 100%;
+
+    &:before {
+        display: block;
+
+        width: 50%;
+        height: 50%;
+
+        border-top: 2px solid #ccc;
+        border-right: 2px solid #333;
+        border-left: 2px solid #333;
+        border-bottom: 2px solid #ccc;
+
         content: "";
-        position: absolute;
-        left: 0;
-        top: 0;
-        height: 100%;
-        width: 100%;
-        background: rgba(black, 0.5);
-        background-image: url('http://loadergenerator.com/gif-load');
+
+        animation: halfspin 0.75s ease infinite;
+        border-radius: 100%;
+    }
+}
+
+@keyframes halfspin {
+    to {
+        transform: rotate(180deg);
     }
 }
